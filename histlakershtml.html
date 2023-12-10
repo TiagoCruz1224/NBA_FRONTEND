@@ -1,0 +1,39 @@
+<html>
+    <body>
+<main>
+    <link rel="stylesheet" href="css/histlakerscss.css">
+    <div class="frontFace">
+        <div class="frontFace-container">
+            <div class="frontContent">
+                <div class="frontContent-sentence">
+                    <div class="frontContent-title">
+                        <p class="frontContent-title-main">Los Angeles<br>Lakers</p>
+                        <p class="frontContent-text">
+                            O Maior campeão da NBA, ao lado dos rivais de Boston, os Los Angeles Lakers é uma das equipas mais populares da liga norte-americana, tendo sido campeã 18 vezes.
+E não são apenas os títulos que justificam o seu tamanho. Foi com a camisola dos Lakers que alguns dos maiores jogadores de basquetebol viveram o auge de suas carreiras, como Jerry West, Wilt Chamberlain, Kareem Abdul-Jabbar e Magic Johnson.
+Nas últimas décadas, vimos Shaquille O’Neal e Kobe Bryant a conduzir a equipa da Califórnia a mais conquistas.
+Em 2020, LeBron James conseguiu cumprir a missão de reconduzir os Los Angeles Lakers ao caminho das vitórias.
+                        </p>
+                    </div>
+                    <div class="frontContent-img">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Los_Angeles_Lakers_logo.svg/1200px-Los_Angeles_Lakers_logo.svg.png" alt="" class="img">
+                    </div>
+                </div>
+    <svg class="overlay" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path class="overlay-path" vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z" />
+    </svg>
+</main>
+
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" id="turbulence" baseFrequency="0.002" numOctaves="3" result="noise" seed="0"/>
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="400" />
+    </filter>
+    <filter id="contrast">
+      <feColorMatrix in="SourceGraphic" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -10" result="matrix" />
+      <feComposite in="SourceGraphic" in2="matrix" operator="atop"/>
+    </filter>
+  </defs>
+</svg>
+</body>
+</html>

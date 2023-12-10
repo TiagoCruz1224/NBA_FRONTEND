@@ -1,0 +1,41 @@
+<html>
+    <body>
+<main>
+    <link rel="stylesheet" href="css/histbullscss.css">
+    <div class="frontFace">
+        <div class="frontFace-container">
+            <div class="frontContent">
+                <div class="frontContent-sentence">
+                    <div class="frontContent-title">
+                        <p class="frontContent-title-main">Chicago<br>Bulls</p>
+                        <p class="frontContent-text">
+                            Os Chicago Bulls tem seis títulos de conferência na sua história. A equipa foi campeã do Leste em 1991, 1992, 1993, 1996, 1997 e 1998.
+Em toda a sua história na NBA, os Bulls disputaram 11 finais de conferência. Curiosamente, as duas primeiras aparições aconteceram quando a franquia disputava a Conferência Oeste. 
+Em 1974 e 1975, os Bulls perderam as finais do Oeste para Milwaukee Bucks e Golden State Warriors.
+O retorno da equipa a uma final de conferência aconteceu em 1989 liderados por Michael Jordan, e o resto é história.
+
+
+                        </p>
+                    </div>
+                    <div class="frontContent-img">
+                        <img src="https://logosmarcas.net/wp-content/uploads/2020/07/Chicago-Bulls-logo.png" alt="" class="img">
+                    </div>
+                </div>
+    <svg class="overlay" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path class="overlay-path" vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z" />
+    </svg>
+</main>
+
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" id="turbulence" baseFrequency="0.002" numOctaves="3" result="noise" seed="0"/>
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="400" />
+    </filter>
+    <filter id="contrast">
+      <feColorMatrix in="SourceGraphic" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -10" result="matrix" />
+      <feComposite in="SourceGraphic" in2="matrix" operator="atop"/>
+    </filter>
+  </defs>
+</svg>
+</body>
+</html>

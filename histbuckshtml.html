@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<main>
+    <link rel="stylesheet" href="css/histbuckscss.css">
+    <div class="frontFace">
+        <div class="frontFace-container">
+            <div class="frontContent">
+                <div class="frontContent-sentence">
+                    <div class="frontContent-title">
+                        <p class="frontContent-title-main">Milwaukee<br>Bucks</p>
+                        <p class="frontContent-text">
+                            Fundado em 1968, os Milwaukee Bucks foram campeões da NBA três anos depois. Em 1971, a equipa derrotou os Baltimore Bullets (atuais Washington Wizards) por 4 a 0 na série decisiva. Aquele foi o primeiro título dos Bucks em toda a sua história.
+Os Bucks voltaram às finais mais duas vezes, em 1974 que perderam para os Boston Celtics por 4-3 e 2021 quando novamente se sagraram campeões liderados por Giannis Antetokounmpo.
+                        </p>
+                    </div>
+                    <div class="frontContent-img">
+                        <img src="https://logosmarcas.net/wp-content/uploads/2020/07/Milwaukee-Bucks-logo.png" alt="" class="img">
+                    </div>
+                </div>
+                
+          </div>
+      </div>
+  </div>
+    <svg class="overlay" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path class="overlay-path" vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z" />
+    </svg>
+    <script src="JS/scriptbucks.js"></script>
+</main>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" id="turbulence" baseFrequency="0.002" numOctaves="3" result="noise" seed="0"/>
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="400" />
+    </filter>
+    <filter id="contrast">
+      <feColorMatrix in="SourceGraphic" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -10" result="matrix" />
+      <feComposite in="SourceGraphic" in2="matrix" operator="atop"/>
+    </filter>
+  </defs>
+</svg>
+    
+</body>
+</html>

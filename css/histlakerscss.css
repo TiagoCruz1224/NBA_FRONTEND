@@ -1,0 +1,337 @@
+@import url(https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap);
+
+html {
+    filter: url('#contrast');
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+body {
+	margin: 0;
+	color: #000;
+	font-family: 'Shippori Mincho', serif;
+	overflow: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+.frontFace {
+    position: relative;
+    height: 100vh;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frontFace-container::before {
+     content: "The\APersistence of\AMemory";
+     white-space: pre;
+     position: absolute;
+     top: 50%;
+     left: 0;
+     transform: translateY(-50%);
+     font-size: 13.375vw;
+     letter-spacing: 0.05em;
+     color: #edebeb;
+     line-height: 1.4;
+}
+
+.frontContent-sentence {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85vw;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+}
+
+.frontContent-title {
+    width: 47.8125vw;
+}
+
+.frontContent-title-main {
+    font-weight: 400;
+	font-size: 8.75vw;
+    letter-spacing: 0.017em;
+    line-height: 1;
+    margin: 5.125vw auto 3vw;
+}
+
+.frontContent-text {
+    margin-top: 2vw;
+    font-weight: 400;
+    text-align: justify;
+    font-size: 1.125vw;
+    letter-spacing: 0.05em;
+    line-height: 2;
+}
+
+.frontContent-img {
+    width: 34.9375vw;
+    margin-top: 6vw;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.backFace {
+	position: relative;
+	background: #fff;
+	opacity: 0;
+    height: 100vh;
+    margin-top: -100vh;
+}
+
+.backFace-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.backFace-text {
+    font-weight: 400;
+    text-align: justify;
+    font-size: 1vw;
+    letter-spacing: 0.1em;
+    width: 60vw;
+    line-height: 2.5;
+}
+
+.clock-container {
+    filter:url('#noise') blur(7px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.c1 {
+    animation: clock-1 15s infinite;
+}
+
+.c2 {
+    animation: clock-2 17s infinite;
+    margin-left: 5vw;
+}
+
+.c3 {
+    animation: clock-3 20s infinite;
+    margin-left: 5vw;
+}
+
+.c4 {
+    animation: typo-1 20s infinite;
+}
+
+.c5 {
+    animation: typo-2 30s infinite;
+}
+
+.clock {
+    width: 31.875vw;
+    height: 29.375vw;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes clock-1 {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes clock-2 {
+    0% {
+        transform: translateY(300%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes clock-3 {
+    0% {
+        transform: translateY(400%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes typo-1 {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes typo-2 {
+    0% {
+        transform: translateY(300%);
+    }
+    100% {
+        transform: translateY(-300%);
+    }
+}
+
+.frontFace--menu-open .button-menu {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.backFace.backFace--open {
+	opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay {
+	position: absolute;
+    top: 0;
+    left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+    pointer-events: none;
+}
+
+.buttonFrame {
+    position: relative;
+    z-index: 1;
+    margin-top: 1vw;
+}
+
+.buttonFrame.close {
+    margin-top: 5vw;
+}
+
+.button-menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    font-family: 'Shippori Mincho', serif;
+    height: 5.625vw;
+    width: 25vw;
+}
+
+.button-open .click,
+.button-close .click {
+    position: relative;
+    line-height: 1;
+    font-size: 1.125vw;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    transition: letter-spacing 0.2s ease-out;
+    height: 5.625vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.button-open::before,
+.button-close::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5.625vw;
+    height: 5.625vw;
+    border-radius: 50%;
+    transition: width 0.2s ease-out, height 0.2s ease-out;
+}
+
+.button-open::before {
+    background-color: #fff;
+    z-index: -1;
+}
+
+.button-close::before {
+    background-color: #f3f3f3;
+}
+
+.button-menu:hover .button-open .click,
+.button-menu:hover .button-close .click {
+    letter-spacing: 0.2em;
+}
+
+.button-menu:hover .button-open::before,
+.button-menu:hover .button-close::before {
+    width: 0;
+    height: 0;
+}
+
+
+@media screen and (min-width:1600px) {
+    .frontFace {
+        height: 100vh;
+    }
+
+    .frontFace-container::before {
+        font-size: 230px;
+    }
+
+
+    .frontContent-sentence {
+        width: 1360px;
+    }
+
+    .frontContent-title {
+        width: 680px;
+    }
+
+    .frontContent-title-main {
+        font-size: 140px;
+        margin: 82px auto 48px;
+    }
+
+    .frontContent-text {
+        margin-top: 32px;
+        font-size: 18px;
+    }
+
+    .frontContent-img {
+        width: 559px;
+        margin-top: 96px;
+    }
+
+   
+    }
+
+
+@media screen and (max-width: 1600px) and (max-height: 800px) {
+    .buttonFrame {
+        margin-top: -4vw;
+    }
+}

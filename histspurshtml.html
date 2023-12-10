@@ -1,0 +1,38 @@
+<html>
+    <body>
+<main>
+    <link rel="stylesheet" href="css/histspurscss.css">
+    <div class="frontFace">
+        <div class="frontFace-container">
+            <div class="frontContent">
+                <div class="frontContent-sentence">
+                    <div class="frontContent-title">
+                        <p class="frontContent-title-main">San Antonio<br>Spurs</p>
+                        <p class="frontContent-text">
+                            Os San Antonio Spurs têm 5 títulos da NBA. Todas as conquistas foram alcançadas a partir do final da década de 1990, sob o comando do técnico Gregg Popovich. 
+Os 5 títulos dos Spurs na NBA foram conquistados em 1999, 2003, 2005, 2007 e 2014. Os vice-campeões foram New York Knicks, New Jersey Nets, Detroit Pistons, Cleveland Cavaliers e Miami Heat.
+A única vez que os San Antonio Spurs foram derrotados em uma final da NBA aconteceu com o placar de 4 a 3, diante dos Miami Heat de LeBron James, Dwyane Wade e Chris Bosh, em 2013. 
+                        </p>
+                    </div>
+                    <div class="frontContent-img">
+                        <img src="https://logosmarcas.net/wp-content/uploads/2020/07/San-Antonio-Spurs-logo.png" alt="" class="img">
+                    </div>
+                </div>
+    <svg class="overlay" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path class="overlay-path" vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z" />
+    </svg>
+</main>
+
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" id="turbulence" baseFrequency="0.002" numOctaves="3" result="noise" seed="0"/>
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="400" />
+    </filter>
+    <filter id="contrast">
+      <feColorMatrix in="SourceGraphic" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -10" result="matrix" />
+      <feComposite in="SourceGraphic" in2="matrix" operator="atop"/>
+    </filter>
+  </defs>
+</svg>
+</body>
+</html>
